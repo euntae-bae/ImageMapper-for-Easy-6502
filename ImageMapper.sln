@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImageMapper", "ImageMapper.vcxproj", "{24DC1C7C-E4FF-4E37-B20C-D9698C0E463C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24DC1C7C-E4FF-4E37-B20C-D9698C0E463C}.Debug|x64.ActiveCfg = Debug|x64
+		{24DC1C7C-E4FF-4E37-B20C-D9698C0E463C}.Debug|x64.Build.0 = Debug|x64
+		{24DC1C7C-E4FF-4E37-B20C-D9698C0E463C}.Debug|x86.ActiveCfg = Debug|Win32
+		{24DC1C7C-E4FF-4E37-B20C-D9698C0E463C}.Debug|x86.Build.0 = Debug|Win32
+		{24DC1C7C-E4FF-4E37-B20C-D9698C0E463C}.Release|x64.ActiveCfg = Release|x64
+		{24DC1C7C-E4FF-4E37-B20C-D9698C0E463C}.Release|x64.Build.0 = Release|x64
+		{24DC1C7C-E4FF-4E37-B20C-D9698C0E463C}.Release|x86.ActiveCfg = Release|Win32
+		{24DC1C7C-E4FF-4E37-B20C-D9698C0E463C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8FE2D782-32B2-4FF0-9C5B-8573B907FBD8}
+	EndGlobalSection
+EndGlobal
