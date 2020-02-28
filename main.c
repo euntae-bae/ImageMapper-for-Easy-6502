@@ -6,7 +6,7 @@
 #include <allegro5/allegro_image.h>
 #define _CRT_SECURE_NO_WARNINGS
 
-#define VERSION "0.3"
+#define VERSION "0.31"
 
 #define COLOR_BLACK			0x00 // RGB(0x00, 0x00, 0x00)
 #define COLOR_WHITE			0x01 // RGB(0xff, 0xff, 0xff)
@@ -31,7 +31,7 @@ bool verboseMode = false, asmMode = false;
 
 void programInfo(void)
 {
-	puts("ImageMapper ver. " VERSION);
+	puts("ImageMapper for Easy6502 ver. " VERSION);
 	puts("(C)2020 catnip1917");
 }
 
@@ -136,15 +136,20 @@ int main(int argc, char* argv[])
 		return -1;
 	}
 
+	bmpWidth = al_get_bitmap_width(bitmap);
+	bmpHeight = al_get_bitmap_height(bitmap);
+	bmpFormat = al_get_bitmap_format(bitmap);
+	
+	if (bmpWidth > 32 || bmpHeight > 32) {
+		fprintf(stderr, "warning: maximum image size is 32x32, but this image file is %dx%d\n", bmpWidth, bmpHeight);
+	}
+
 	outfile = fopen(argv[2], "wt");
 	if (!outfile) {
 		fprintf(stderr, "file open error: %s\n", argv[2]);
 		return -1;
 	}
-
-	bmpWidth = al_get_bitmap_width(bitmap);
-	bmpHeight = al_get_bitmap_height(bitmap);
-	bmpFormat = al_get_bitmap_format(bitmap);
+	
 	mem = al_lock_bitmap(bitmap, bmpFormat, ALLEGRO_LOCK_READONLY);
 
 	if (verboseMode) {
